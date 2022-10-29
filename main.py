@@ -45,8 +45,6 @@ def writeCsvWithRegexMatch_RegexInLine(fileCsvWithFind, reader):
                     if(foundRegexGroup):
                         stringToWrite = foundRegexGroup + " , " + line
                         fileCsvWithFind.write(stringToWrite)
-                        # print(line)
-                        # print(foundRegexGroup + "\n")
 def writeCsvWithRegexMatch_RegexNotInLine(fileCsvWithFind, reader):
     text = ""
     for page in reader.pages:
