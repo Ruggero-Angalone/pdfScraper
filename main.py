@@ -43,7 +43,7 @@ def writeCsvWithRegexMatch_RegexInLine(fileCsvWithFind, reader):
                 if(regexMatch):
                     foundRegexGroup = regexMatch.group(regexGroupNumber)
                     if(foundRegexGroup):
-                        stringToWrite = foundRegexGroup + " , " + line
+                        stringToWrite = foundRegexGroup + " \t " + line
                         fileCsvWithFind.write(stringToWrite)
 def writeCsvWithRegexMatch_RegexNotInLine(fileCsvWithFind, reader):
     text = ""
@@ -74,7 +74,7 @@ def main():
     fileCsvWithFind = open(appendCsvFindToFilename(filename), "w")
     logging.info("opened file where the regex match will be written with name: "+appendCsvFindToFilename(filename))
     if(regexInLine):
-        fileCsvWithFind.write("MATCH, CONTEXT \n")
+        fileCsvWithFind.write("MATCH \t CONTEXT \n")
         writeCsvWithRegexMatch_RegexInLine(fileCsvWithFind, reader)
     else:
         fileCsvWithFind.write("MATCH \n")
