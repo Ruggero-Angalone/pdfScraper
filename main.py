@@ -10,8 +10,9 @@ logging.basicConfig(filename="log.txt",
                     level=logging.DEBUG)
 
 regexPatternToFind = "\d*"
-regexInLine = True
 regexGroupNumber = 0
+regexInLine = True
+
 
 def extensionFromPdfToTxt(filenamePdf):
     filenameToTxt = filenamePdf
